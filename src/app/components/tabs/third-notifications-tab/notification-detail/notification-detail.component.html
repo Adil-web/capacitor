@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-start">{{ loadedJournal.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-row>
+    <ion-col size-md="6" offset-md="3">
+      <ion-label>
+        <h2>{{ loadedJournal.name }}</h2>
+        <ion-label color="medium">
+          <h6>{{ loadedJournal.date }}</h6>
+        </ion-label>
+        <p>{{ loadedJournal.event }}</p>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+</ion-content>

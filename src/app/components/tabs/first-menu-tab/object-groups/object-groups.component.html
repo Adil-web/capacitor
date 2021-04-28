@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-tab-button tab="case" style="float: left; background: transparent">
+      <ion-icon size="large" color="light" name="arrow-back-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-title class="ion-text-start">Группы объектов</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <app-object-item
+      *ngFor="let item of objectItems"
+      [title]="item['title']"
+      [typeIcon]="item['icon']"
+      [routerLink]="item['src']"
+    ></app-object-item>
+  </ion-list>
+</ion-content>

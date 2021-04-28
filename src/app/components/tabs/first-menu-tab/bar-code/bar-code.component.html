@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-tab-button tab="case" style="float: left; background: transparent">
+      <ion-icon size="large" color="light" name="arrow-back-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-title>Сканер</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full" (click)="scanBarcode()">
+    <ion-icon size="large" name="barcode-outline" slot="start"></ion-icon>
+    Start
+  </ion-button>
+</ion-content>

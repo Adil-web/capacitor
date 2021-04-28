@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-tab-button tab="case" style="float: left; background: transparent">
+      <ion-icon size="large" color="light" name="arrow-back-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-title class="ion-text-start">Беседы</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <app-conversation-item
+      *ngFor="let log of logs"
+      [title]="log['title']"
+      [info]="log['info']"
+      [date]="log['date']"
+    ></app-conversation-item>
+  </ion-list>
+</ion-content>

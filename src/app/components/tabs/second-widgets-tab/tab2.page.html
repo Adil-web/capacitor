@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center">
+      Пользователи
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <app-user-item
+      *ngFor="let user of users"
+      [userName]="user['name']"
+      [icon]="user['icon']"
+    ></app-user-item>
+  </ion-list>
+</ion-content>

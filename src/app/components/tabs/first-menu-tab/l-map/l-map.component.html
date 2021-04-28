@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-tab-button tab="case" style="float: left; background: transparent">
+      <ion-icon size="large" color="light" name="arrow-back-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-title>Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="map" [scrollY]="false" [fullscreen]="false" class="map-container">
+  <ion-fab vertical="top" slot="fixed" style="position: absolute; top: 80px">
+    <ion-fab-button size="small" (click)="getCurrentCoordinates()">
+      <ion-icon name="locate-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

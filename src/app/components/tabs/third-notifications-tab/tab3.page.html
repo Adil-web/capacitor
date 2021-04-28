@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center">
+      Системный журнал
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <app-notification-item
+      *ngFor="let item of journal"
+      [name]="item.name"
+      [event]="item.event"
+      [date]="item.date">
+    </app-notification-item>
+  </ion-list>
+</ion-content>
